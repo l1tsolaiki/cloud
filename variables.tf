@@ -10,5 +10,15 @@ variable "yc_token" {
 
 variable "user" {
   type = string
-  description = "$USER"
+  description = "Local user"
+}
+
+variable "service_account_id" {
+  type = string
+  description = "Id of service account to be used"
+}
+
+variable "account_name" {
+  type = string
+  description = "Name for terraform service account"
 }
