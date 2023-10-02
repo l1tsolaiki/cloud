@@ -29,7 +29,7 @@ resource "yandex_compute_instance" "minecraft-server" {
       nat = true
   }
   metadata = {
-      ssh-keys = "${var.user}:${file("~/.ssh/id_ed25519.pub")}"
+      user-data = file("${path.module}/minecraft/cloud_config.yaml")
       docker-compose = data.local_file.docker_spec.content
   }
 }
