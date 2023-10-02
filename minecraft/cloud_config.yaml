@@ -1,0 +1,13 @@
+#cloud-config
+users:
+  - name: l1tsolaiki
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ+xSHWb3Xz2WvScNbRsFHZC1l/TZyqEzmp4kml6ZrGV== l1tsolaiki
+write_files:
+  - content: |
+      test
+    path:
+      /home/l1tsolaiki/test.txt
