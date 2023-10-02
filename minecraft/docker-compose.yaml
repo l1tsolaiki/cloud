@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  mc:
+  minecraft:
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
@@ -13,6 +13,11 @@ services:
       ONLINE_MODE: "FALSE"
       SERVER_NAME: "sleepydog"
       DIFFICULTY: "normal"
+      VERSION: 1.18.2
+      ICON: "https://freepngimg.com/thumb/cat/2-black-cat-png-image.png"
+      OVERRIDE_ICON: "TRUE"
+      VIEW_DISTANCE: 16
+      ENABLE_ROLLING_LOGS: "TRUE"
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - /home/l1tsolaiki/data:/data
